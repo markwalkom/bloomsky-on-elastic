@@ -1,0 +1,141 @@
+PUT _template/bloomsky
+{
+  "order": 0,
+  "index_patterns": [
+    "bloomsky-*"
+  ],
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "@version": {
+          "type": "keyword"
+        },
+        "ALT": {
+          "type": "float"
+        },
+        "BoundedPoint": {
+          "type": "keyword"
+        },
+        "CityName": {
+          "type": "keyword"
+        },
+        "DST": {
+          "type": "short"
+        },
+        "Data": {
+          "properties": {
+            "DeviceType": {
+              "type": "keyword"
+            },
+            "Humidity": {
+              "type": "long"
+            },
+            "ImageTS": {
+              "type": "long"
+            },
+            "ImageURL": {
+              "type": "keyword"
+            },
+            "Luminance": {
+              "type": "short"
+            },
+            "Night": {
+              "type": "boolean"
+            },
+            "Pressure": {
+              "type": "short"
+            },
+            "Rain": {
+              "type": "boolean"
+            },
+            "TS": {
+              "type": "long"
+            },
+            "Temperature": {
+              "type": "float"
+            },
+            "UVIndex": {
+              "type": "short"
+            },
+            "Voltage": {
+              "type": "short"
+            }
+          }
+        },
+        "DeviceID": {
+          "type": "keyword"
+        },
+        "DeviceName": {
+          "type": "keyword"
+        },
+        "FullAddress": {
+          "type": "keyword"
+        },
+        "LAT": {
+          "type": "float"
+        },
+        "LON": {
+          "type": "float"
+        },
+        "NumOfFollowers": {
+          "type": "short"
+        },
+        "Point": {
+          "type": "object"
+        },
+        "PreviewImageList": {
+          "type": "keyword"
+        },
+        "RegisterTime": {
+          "type": "long"
+        },
+        "Searchable": {
+          "type": "boolean"
+        },
+        "Storm": {
+          "properties": {
+            "24hRain": {
+              "type": "float"
+            },
+            "RainDaily": {
+              "type": "float"
+            },
+            "RainRate": {
+              "type": "float"
+            },
+            "SustainedWindSpeed": {
+              "type": "float"
+            },
+            "UVIndex": {
+              "type": "short"
+            },
+            "WindDirection": {
+              "type": "keyword"
+            },
+            "WindGust": {
+              "type": "float"
+            }
+          }
+        },
+        "StreetName": {
+          "type": "keyword"
+        },
+        "UTC": {
+          "type": "short"
+        },
+        "VideoList": {
+          "type": "keyword"
+        },
+        "VideoList_C": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
